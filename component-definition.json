@@ -173,6 +173,24 @@
               }
             }
           }
+        },
+        {
+          "title": "Table",
+          "id": "table",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "name": "Table",
+                  "model": "table",
+                  "filter": "table",
+                  "columns": "2",
+                  "rows": "1"
+                }
+              }
+            }
+          }
         }
       ]
     }

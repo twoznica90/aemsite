@@ -1,0 +1,101 @@
+{
+  "definitions": [
+    {
+      "title": "Table",
+      "id": "table",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/columns/v1/columns",
+            "template": {
+              "name": "Table",
+              "model": "table",
+              "filter": "table",
+              "columns": "2",
+              "rows": "1"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "table",
+      "fields": [
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "columns",
+          "label": "Columns",
+          "value": 2,
+          "validation": {
+            "numberMin": 1,
+            "numberMax": 20,
+            "customErrorMsg": "Choose 1–20 columns"
+          }
+        },
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "rows",
+          "label": "Rows",
+          "value": 1
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "classes",
+          "label": "Style",
+          "value": "",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Background Stone",
+              "value": "bg-stone"
+            },
+            {
+              "name": "Background Crystal",
+              "value": "bg-crystal"
+            },
+            {
+              "name": "Header Stone",
+              "value": "header-stone"
+            },
+            {
+              "name": "Header Crystal",
+              "value": "header-crystal"
+            }
+          ]
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_header",
+          "label": "First row is header",
+          "value": false
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "table",
+      "components": [
+        "column"
+      ]
+    },
+    {
+      "id": "column",
+      "components": [
+        "text",
+        "title",
+        "image",
+        "button"
+      ]
+    }
+  ]
+}
